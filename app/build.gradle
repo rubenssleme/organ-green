@@ -37,7 +37,11 @@ dependencies {
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'com.google.firebase:firebase-auth:18.0.0'
     implementation 'com.google.firebase:firebase-storage:18.0.0'
+    //Firebase novas
     implementation 'com.firebaseui:firebase-ui-storage:6.1.0'
+    implementation 'com.google.firebase:firebase-auth:21.0.1'
+    implementation 'com.google.firebase:firebase-database:20.0.0'
+
 
 
     //smarttab
@@ -46,12 +50,10 @@ dependencies {
 
     //navbar bottom
     implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.4'
-
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
 
-
+    //Imagem do perfil
     implementation 'de.hdodenhof:circleimageview:3.0.1'
-
     implementation 'com.miguelcatalan:materialsearchview:1.4.0'
 
 }
