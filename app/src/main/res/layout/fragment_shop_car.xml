@@ -81,13 +81,13 @@
                             android:orientation="horizontal">
 
                             <ImageButton
-                                android:id="@+id/imageButton"
+                                android:id="@+id/diminuiButton"
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:src="@drawable/ic_remove" />
 
                             <TextView
-                                android:id="@+id/textView6"
+                                android:id="@+id/qtdeTextView"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="1"
@@ -95,7 +95,7 @@
                                 android:textSize="20sp" />
 
                             <ImageButton
-                                android:id="@+id/imageButton2"
+                                android:id="@+id/somaButton"
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:src="@drawable/ic_add" />
@@ -105,7 +105,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:id="@+id/textView7"
+                        android:id="@+id/subTotalText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="15dp"
@@ -144,7 +144,7 @@
                         android:layout_marginStart="25dp"/>
 
                     <TextView
-                        android:id="@+id/textView9"
+                        android:id="@+id/totalPedidoTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="R$ 6,00"
