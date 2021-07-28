@@ -21,9 +21,9 @@
             android:hint="E-mail"
             android:imeOptions="actionNext"
             android:inputType="textEmailAddress"
-            android:shadowColor="@color/colorPrimary"
+            android:shadowColor="@color/colorPrimary51"
             android:textColor="@color/colorBlack"
-            android:textColorLink="@color/colorPrimary">
+            android:textColorLink="@color/colorPrimary51">
 
         </com.google.android.material.textfield.TextInputEditText>
 
@@ -46,9 +46,9 @@
             android:includeFontPadding="true"
             android:inputType="textPassword"
             android:password="true"
-            android:shadowColor="@color/colorPrimary"
+            android:shadowColor="@color/colorPrimary51"
             android:textColor="@color/colorBlack"
-            android:textColorLink="@color/colorPrimary">
+            android:textColorLink="@color/colorPrimary51">
 
         </com.google.android.material.textfield.TextInputEditText>
 

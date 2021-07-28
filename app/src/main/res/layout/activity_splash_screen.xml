@@ -35,7 +35,7 @@
             android:layout_width="114dp"
             android:layout_height="match_parent"
             android:text="Organ"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorPrimary51"
             android:textSize="36sp"
             app:fontFamily="@font/lato_bold"
             app:layout_constraintBottom_toBottomOf="parent"
