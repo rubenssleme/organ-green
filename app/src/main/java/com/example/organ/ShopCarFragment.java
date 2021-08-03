@@ -47,21 +47,27 @@ public class ShopCarFragment extends Fragment {
             }
         });
 
-        somaButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Integer qtde =  Integer.parseInt(qtdeTextView.getText().toString());
-                qtde += 1;
-                qtdeTextView.setText(qtde.toString());
-                Toast.makeText(getContext(), qtde.toString(), Toast.LENGTH_SHORT).show();
-            }
-        });
 
         subtraiButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Integer qtde =  Integer.parseInt(qtdeTextView.getText().toString());
                 qtde -= 1;
+
+                if(qtde>=0) {
+                    qtdeTextView.setText(qtde.toString());
+                }else{
+                    Toast.makeText(getContext(),"valor já zero",Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
+        somaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Integer qtde =  Integer.parseInt(qtdeTextView.getText().toString());
+                qtde += 1;
                 qtdeTextView.setText(qtde.toString());
                 Toast.makeText(getContext(), qtde.toString(), Toast.LENGTH_SHORT).show();
             }

@@ -18,7 +18,7 @@ public class DetalhesProdutoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detalhes_produto);
+        setContentView(R.layout.activity_detalhes_pimentao);
 
         Toolbar toolbar = findViewById(R.id.toolbarPrincipal);
         toolbar.setTitle("");
