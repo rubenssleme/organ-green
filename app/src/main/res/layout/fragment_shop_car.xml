@@ -105,12 +105,23 @@
                     </androidx.cardview.widget.CardView>
 
                     <TextView
+                        android:id="@+id/cifraoText"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:gravity="end"
+                        android:text="R$"
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+
+                    <TextView
                         android:id="@+id/subTotalText"
-                        android:layout_width="match_parent"
+                        android:layout_width="118dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="15dp"
                         android:gravity="end"
                         android:text="6.00"
+                        android:textAlignment="center"
                         android:textColor="#000"
                         android:textSize="20sp" />
                 </LinearLayout>
