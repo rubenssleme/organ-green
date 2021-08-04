@@ -59,7 +59,7 @@ public class ShopCarFragment extends Fragment {
                 qtde -= 1;
 
                 if(qtde>=0) {
-                 String subtotal =  String.valueOf(subTotal-(1 * valorUnitario));
+                 String subtotal =  String.valueOf(subTotal-valorUnitario);
                     subTotalText.setText(subtotal.toString());
                     qtdeTextView.setText(qtde.toString());
 
