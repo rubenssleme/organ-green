@@ -11,10 +11,12 @@ import java.util.Map;
 
 public class Usuario {
 
-    private String idUsuario;
+    private Long id;
     private String nome;
     private String email;
+    private String telefone;
     private String senha;
+    private String idUsuario;
     private String foto;
 
     public Usuario() {

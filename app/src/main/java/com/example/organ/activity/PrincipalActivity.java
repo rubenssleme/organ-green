@@ -6,11 +6,12 @@ import android.os.Bundle;
 
 import com.example.organ.R;
 
-public class FavoritosActivity extends AppCompatActivity {
+
+public class PrincipalActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_favoritos);
+        setContentView(R.layout.activity_principal);
     }
 }

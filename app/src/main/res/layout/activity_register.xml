@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".fragment.RegisterFragment">
+    tools:context=".activity.RegisterActivity">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtNomeUserLayout"
@@ -14,18 +14,18 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="100dp">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/txtNomeUser"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:imeOptions="actionNext"
-        android:hint="Nome de Usuário"
-        android:inputType="textPersonName"
-        android:shadowColor="@color/colorPrimary51"
-        android:textColor="@color/colorBlack"
-        android:textColorLink="@color/colorPrimary51">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtNomeUser"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:hint="Nome de Usuário"
+            android:inputType="textPersonName"
+            android:shadowColor="@color/colorPrimary51"
+            android:textColor="@color/colorBlack"
+            android:textColorLink="@color/colorPrimary51">
 
-    </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -34,18 +34,18 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/txtEmailRegister"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:imeOptions="actionNext"
-        android:hint="E-mail"
-        android:inputType="textEmailAddress"
-        android:shadowColor="@color/colorPrimary51"
-        android:textColor="@color/colorBlack"
-        android:textColorLink="@color/colorPrimary51">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtEmailRegister"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            android:shadowColor="@color/colorPrimary51"
+            android:textColor="@color/colorBlack"
+            android:textColorLink="@color/colorPrimary51">
 
-    </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputEditText>
 
     </com.google.android.material.textfield.TextInputLayout>
 

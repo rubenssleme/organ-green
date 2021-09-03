@@ -1,6 +1,10 @@
 package com.example.organ.model;
 
 public class Produtos {
+    private Long id;
+    private String nome;
+    private Double preco;
+    private String imgURL;
     private String nomeProd;
     private String precoProd;
     private String descricao;

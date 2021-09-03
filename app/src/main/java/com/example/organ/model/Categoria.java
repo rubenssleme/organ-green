@@ -2,8 +2,11 @@ package com.example.organ.model;
 
 public class Categoria {
 
-    private String nomeCategoria;
     private int imgProdutoCategoria;
+    private Long id;
+    private String nome;
+    private String nomeCategoria;
+
 
     public Categoria() {
 

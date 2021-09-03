@@ -1,4 +1,4 @@
-package com.example.organ;
+package com.example.organ.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,8 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 
-import com.example.organ.activity.LoginActivity;
-import com.example.organ.activity.MainActivity;
+import com.example.organ.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
@@ -24,7 +23,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(getBaseContext(), LoginActivity.class));
+                startActivity(new Intent(getBaseContext(), MenuActivity.class));
                 finish();
             }
         },3000);

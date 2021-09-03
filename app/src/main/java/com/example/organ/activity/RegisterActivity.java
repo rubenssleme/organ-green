@@ -1,24 +1,15 @@
-package com.example.organ.fragment;
-
-
-import android.content.res.AssetManager;
-import android.graphics.Typeface;
-import android.os.Bundle;
+package com.example.organ.activity;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
 
-import android.util.Base64;
-import android.view.LayoutInflater;
+import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.example.organ.R;
-import com.example.organ.activity.LoginActivity;
 import com.example.organ.config.ConfigFirebase;
 import com.example.organ.helper.Base64Custom;
 import com.example.organ.helper.UsuarioFirebase;
@@ -26,26 +17,13 @@ import com.example.organ.model.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
-
-public class RegisterFragment extends Fragment {
-
-
-    public RegisterFragment() {
-        // Required empty public constructor
-    }
-
-
+public class RegisterActivity extends AppCompatActivity {
     private Button btnRegistrar;
     private TextInputEditText varNome, varEmail, varSenha;
     private FirebaseAuth auth;
@@ -53,34 +31,29 @@ public class RegisterFragment extends Fragment {
     private RadioButton rbtnTermo;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_register, container, false);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_register);
 
-        varNome = view.findViewById(R.id.txtNomeUser);
-        varEmail = view.findViewById(R.id.txtEmailRegister);
-        varSenha = view.findViewById(R.id.txtSenhaRegister);
+        varNome = findViewById(R.id.txtNomeUser);
+        varEmail = findViewById(R.id.txtEmailRegister);
+        varSenha = findViewById(R.id.txtSenhaRegister);
         email = varEmail.getText().toString();
         senha = varSenha.getText().toString();
 
-        btnRegistrar = view.findViewById(R.id.btnRegistrar);
+        btnRegistrar = findViewById(R.id.btnRegistrar);
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 validationUser(email, senha);
             }
         });
-
-        return view;
     }
-
-
     public void validationUser(String email, String senha){
         String txtNome = varNome.getText().toString();
         String txtEmail = varEmail.getText().toString();
         String txtSenha = varSenha.getText().toString();
-        rbtnTermo = getView().findViewById(R.id.rbtnTermo);
+        rbtnTermo = findViewById(R.id.rbtnTermo);
 
         if(!txtNome.isEmpty() && !txtEmail.isEmpty() && !txtSenha.isEmpty())
             if(!txtNome.isEmpty()) {
@@ -96,29 +69,29 @@ public class RegisterFragment extends Fragment {
                             registerUser(usuario);
                         }
                         else{
-                            Toast.makeText(getActivity(),
+                            Toast.makeText(RegisterActivity.this,
                                     "Aceite os termos e condições",
                                     Toast.LENGTH_LONG).show();
                         }
 
                     } else {
-                        Toast.makeText(getActivity(),
+                        Toast.makeText(RegisterActivity.this,
                                 "Senha não preenchida!",
                                 Toast.LENGTH_LONG).show();
                     }
                 } else {
-                    Toast.makeText(getActivity(),
+                    Toast.makeText(RegisterActivity.this,
                             "E-mail não preenchido!",
                             Toast.LENGTH_LONG).show();
                 }
             }
             else{
-                Toast.makeText(getActivity(),
+                Toast.makeText(RegisterActivity.this,
                         "Nome não preenchido!",
                         Toast.LENGTH_LONG).show();
             }
         else{
-            Toast.makeText(getActivity(),
+            Toast.makeText(RegisterActivity.this,
                     "Preencha TODOS os campos!",
                     Toast.LENGTH_LONG).show();
         }
@@ -130,16 +103,16 @@ public class RegisterFragment extends Fragment {
         auth.createUserWithEmailAndPassword(
                 usuario.getEmail(),
                 usuario.getSenha()
-        ).addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>(){
+        ).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>(){
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 if(task.isSuccessful()){
-                    Toast.makeText(getActivity(),
+                    Toast.makeText(RegisterActivity.this,
                             "Sucesso ao cadastrar usuário",
                             Toast.LENGTH_LONG).show();
                     UsuarioFirebase.atualizarNomeUsuario(usuario.getNome());
-                    getActivity().finish();
+                    finish();
 
                     try{
                         String idUsuario = Base64Custom.codificarBase64(usuario.getEmail());
@@ -164,14 +137,12 @@ public class RegisterFragment extends Fragment {
                         excecao = "Erro ao cadastrar usuário: " + e.getMessage();
                         e.printStackTrace();
                     }
-                    Toast.makeText(getActivity(),
+                    Toast.makeText(RegisterActivity.this,
                             excecao,
                             Toast.LENGTH_LONG).show();
                 }
             }
         });
     }
-
-
 
 }
